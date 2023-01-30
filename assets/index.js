@@ -1,4 +1,4 @@
-var APIkey = "ee8dcb8d655a4bb76ff89dc355fc9e8";
+var APIkey = "ee8dcb8d655a4bb76ff89dc3e55fc9e8";
 
 var pastSearchedCitiesEl = $('#past-searches');
 var cityInputEl = $('#city-input');
