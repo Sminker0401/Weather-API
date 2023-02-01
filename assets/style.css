@@ -48,3 +48,14 @@ button:hover {
 h1.temp {
     margin: 0;
 }
+.weather.loading {
+   visibility: hidden; 
+}
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: darkslateblue;
+    position: absolute;
+    top: 0;
+
+}
