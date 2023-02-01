@@ -2,16 +2,46 @@ body {
    display:flex;
    justify-content: center; 
    align-items: center;
-   height: 50vh;
+   height: 100vh;
    margin: 0%;
    background-color: lightpink;
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 20px;
 }
 
 .card {
-    background: lightgray;
+    background: rgba(112, 128, 144, 0.473);
+    color: darkslateblue;
     padding: 2em;
     border-radius: 20px;
-    width: 50%;
+    width: 25%;
     margin: 400px;
     margin: 2em;
+}
+.search {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+button {
+    margin: .5em;
+    border-radius: 50%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: bisque;
+    cursor: pointer;
+}
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: .5em;
+    background: bisque;
+    color: darkslateblue;
+    font-family: inherit;
+    font-size: 20px;
+    width: 75%;
+}
+button:hover {
+    background: rgba(255, 228, 196, 0.267);
 }
