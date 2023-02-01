@@ -45,3 +45,6 @@ input.search-bar {
 button:hover {
     background: rgba(255, 228, 196, 0.267);
 }
+h1.temp {
+    margin: 0;
+}
