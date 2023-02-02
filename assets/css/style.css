@@ -1,0 +1,19 @@
+body {
+    background: lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    color: white;
+
+}
+
+.outer-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
