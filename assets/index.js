@@ -14,19 +14,22 @@ let weather = {
         document.querySelector(".description").innerText = description;
         document.querySelector(".temp").innerText = temp + "°F";
         document.querySelector(".humidity").innerText = "Humidity:" + humidity + "%";
-        // document.querySelector(".winds").innerText = "Wind Speed:" + speed + "mph";
+        document.querySelector(".winds").innerText = "Wind Speed:" + speed + "mph";
         document.querySelector(".weather").classList.remove("loading");
         },
         search: function () {
-            this.FetchWeather(document.querySelector(".search-bar").value);
+            this.FetchWeather(document.querySelector(".search").value);
 
         },
         
 
 };
 
-document.querySelector(".search button").addEventListener("click", function () {
+document.querySelector(".search-button").addEventListener("click", function () {
     weather.search();
 });
 
+document.querySelector(".search").addEventListener("click", function () {
+    weather.FetchWeather("city");
+});
 
