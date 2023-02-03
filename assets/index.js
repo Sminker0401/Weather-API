@@ -18,18 +18,18 @@ let weather = {
         document.querySelector(".weather").classList.remove("loading");
         },
         search: function () {
-            this.FetchWeather(document.querySelector(".search").value);
+            this.FetchWeather(document.querySelector(".search-btn").value);
 
         },
         
 
 };
 
-document.querySelector(".search-button").addEventListener("click", function () {
+document.querySelector(".search-btn").addEventListener("click", function () {
     weather.search();
 });
 
-document.querySelector(".search").addEventListener("click", function () {
+document.querySelector(".search-btn").addEventListener("click", function () {
     weather.FetchWeather("city");
 });
 
