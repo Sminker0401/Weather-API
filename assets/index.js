@@ -57,9 +57,8 @@
             let wind = returnData.list[0].wind.speed;
             let humidity = returnData.list[0].main.humidity;
             weatherImg.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-            //use backticks to make template literal so spcace will not be ignored
-            //use innerHTML instead of textContent so interpreted correctly not as text
-            currDay.innerHTML = `&nbsp;(` + theday + `)`;
+            //backticks make template literal, so spcace will not be ignored
+            currDay.innerHTML = `&nbsp;(` + theday + `)`; //innerHTML instead of textContent so interpreted correctly not as text
             cityName.textContent = city;
             currTemp.textContent = temp + ' °F';
             currWind.textContent = wind + ' MPH';
@@ -99,7 +98,7 @@ function createCityButtons(){
       var btn = document.createElement("button");
       btn.id = "city-btn" + i;
       btn.className = "city-btn";
-      btn.innerText = data[i];  //loop and read local storage with city history
+      btn.innerText = data[i];  //read local storage with city history
       btn.addEventListener('click', function(e){ handleSearch(e.target.innerText) });
       btnDivEl.appendChild(btn);
     }
