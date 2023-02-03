@@ -2,7 +2,7 @@
     <title>Weather Dashboard</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 
 <body>
@@ -13,20 +13,20 @@
             </div>
         </header>
     </div>
-    <div class="container"></div>
+    <div class="container">
     <main>
-        <div class="outer-left">
+        <div class="outer-div-left">
             <h2>Search for a City:</h2>
             <input class="search-input" id="search-input" placeholder="philadelphia" />
             <button class="search-btn" id="search-btn">Search</button>
          <div id="prev-search" class="prev-searches" placeholder="Philadelphia"></div>
 
         </div>
-        <div class="outer-right hide">
+        <div class="outer-div-right">
             <div class="curr-day-forecast">
-                <span class="weather-box-1">
-                    <h3 id="city">blackwood</h3>
-                    <h3 id="date">2/1/23</h3>
+                <span class="first-weather-box">
+                    <h3 id="city-name">blackwood</h3>
+                    <h3 id="thedate">2/1/23</h3>
                     <img id="weather-img" style="max-height:3rem;" src=""
                         alt="image of weather predicted for the day">
                 </span>
@@ -36,7 +36,8 @@
             </div>
             <div>
                 <h3>5-Day Forecast:</h3>
-                <div class="five-day-container">
+                    <div class="five-day-container">
+                    <div class="five-day-forecast">
                     <h3 id="thedate0"></h3>
                     <img id="weather-img0" style="max-height:3rem;" src=""
                     alt="image of weather predicted for 5 day forecast day 1">
@@ -76,9 +77,13 @@
                     <p>Wind: <span id="wind4"></span></p>
                     <p>Humidity: <span id="humidity4"></span></p>
                 </div>
+                </div>
             </div>
         </div>
     </main>
+</div>
+</div>
+</div>
     <script src="assets/index.js"></script>
 </body>
 </html>

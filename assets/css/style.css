@@ -1,19 +1,146 @@
-body {
-    background: lightgrey;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.container {
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: blue;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background: white;
+  }
+  header {
+    padding: 5px;
+    /*space between elements and text*/
+    background-image: linear-gradient(to right, #465ab8, #261360);
+    text-align: center;
+  }
+  header h1 {
     color: white;
-
-}
-
-.outer-left {
+  }
+  .container {
+    max-width: 1170px;
+    /*std size for desktop - automatically fixes spacing on edges*/
+    /* center left and right within container. 
+       margin left and right only work when width is specifyied*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main {
     display: flex;
-    justify-content: left;
-    align-items: center;
-}
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .outer-div-left {
+    width: 30%;
+  }
+  .outer-div-right {
+    width: 70%;
+    height: 60%;
+  }
+  /*never give height to labels, inputs, buttons or headings*/
+  .search-input {
+    /*rounded borders on input box*/
+    border-radius: 5px;
+    border: 2px solid #a1a1a1;
+    /* padding is for all-around - all side left, rt, up, down */
+    padding: 10px 0 10px 5px;
+    /*means 10px top, 0 right, 10px bottom, 5px left, goes clockwise*/
+    width: 260px;
+    margin-bottom: 10px;
+  }
+  .search-btn {
+    background-color: #6991e3;
+    position: relative;
+    /*to get line under search btn as seen below*/
+    width: 260px;
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px 0 10px 0px;
+    border: none;
+    /*no border*/
+    border-radius: 5px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    /*bold = 600 so this is a bit less than full bold*/
+  }
+  .search-btn::after {
+    content: "";
+    /*fake out as if there were text here so can use underline property below button*/
+    border-bottom: 5px solid #c8c8c9;
+    /*this is the thickness, style and color of the border*/
+    position: absolute;
+    bottom: -10px;
+    /*sets up spacing below*/
+    left: 0px;
+    /*no left spacing*/
+    width: 260px;
+    /*same width (how long) as buttons above and beloww*/
+    height: 4px;
+    /*how thick (high) line is*/
+    padding: 10px 0 10px 0px;
+    /*space around */
+  }
+  .prev-searches {   /*for spacing below line*/
+    padding: 10px 0 10px 0px;   /*space around */
+  }
+  /*hide elements to start*/
+  .hide {
+    display: none;
+  }
+  .first-weather-box {
+    display: flex;
+  }
+  .city-btn {
+    background: #aeaeae;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    width: 260px;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 0px;   /*space around */
+    border: none;   /*no border*/
+    border-radius: 5px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;    /*bold = 600*/
+    font-size: 16px;
+  }
+  .curr-day-forecast {
+    background-color: #d2ddf7;
+    border: 2px solid #a1a1a1;
+    padding: 4px;   /*space between elements and text*/
+    margin-top: 10px;   /*put some space between header and curr day forecast box*/
+  }
+  .five-day-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .five-day-forecast {
+    background-color: #447bfa;
+    color: white;
+    width: 19%;
+    padding: 5px;   /*space between elements and text*/
+    border-radius: .5rem;
+  }
+  @media screen and (max-width: 1183px) {
+    main {
+      flex-direction: column;
+    }
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
