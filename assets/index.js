@@ -7,13 +7,13 @@
  let currWind = document.querySelector("#wind");
  let currHumidity = document.querySelector("#humidity");
  let showRightSide = document.querySelector(".outer-div-right");
- let cityArray = JSON.parse(localStorage.getItem("pastCitySearches")) || [];
+ let cityArray = JSON.parse(localStorage.getItem("pastCitySearches")) || []; //or will come back an empty array
  let searchcity = document.getElementById("search-input"); 
 
  let searchBtn = document.getElementById("search-btn"); 
  searchBtn.addEventListener("click", function(){
    if (document.getElementById("search-input").value != "") {
-     handleSearch(searchcity.value);
+     searchfor(searchcity.value);
    } else {
      alert("Please enter a city value in the textbox.");
     }  
@@ -33,13 +33,21 @@
 })
 
 
- }
-    
-// document.querySelector(".search-btn").addEventListener("click", function () {
-//     weather.search();
-// });
+} //end of function searchfor
 
-// document.querySelector(".search-btn").addEventListener("click", function () {
-//     weather.FetchWeather("city");
-// });
+function createCityButtons(){
+    let data = JSON.parse(localStorage.getItem('pastCitySearches'));
+    if(data) {
+    var btnDivEl = document.getElementById('prev-searches');
+    btnDivEl.textContent = "";
+    for (let i = 0; i < data.length; i++) {
+      var btn = document.createElement("button");
+      btn.id = "city-btn" + i;
+      btn.className = "city-btn";
+      btn.innerText = data[i];  //loop and read local storage with city history
+      btn.addEventListener('click', function(e){ handleSearch(e.target.innerText) });
+      btnDivEl.appendChild(btn);
+    }
+   }
 
+}
