@@ -51,3 +51,14 @@ function createCityButtons(){
    }
 
 }
+
+function saveCityData(city){
+    if(!cityArray.includes(city)){
+      cityArray.unshift(city);  
+      localStorage.setItem("pastCitySearches", JSON.stringify(cityArray.slice(0,8))); 
+    }
+  }
+ function init(){
+  createCityButtons();  
+ }
+  init();
