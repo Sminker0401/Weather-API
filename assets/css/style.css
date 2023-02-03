@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   body {
-    font-family: Arial;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
   header {
     padding: 5px;
     /*space between elements and text*/
-    background-image: linear-gradient(to right, #465ab8, #261360);
+    background-image: linear-gradient(to left, #b472ab, #d861be);
     text-align: center;
   }
   header h1 {
@@ -33,28 +33,28 @@
     justify-content: space-around;
     flex-direction: row;
   }
-  .outer-div-left {
+  .outer-left {
     width: 30%;
   }
-  .outer-div-right {
+  .outer-right {
     width: 70%;
     height: 60%;
   }
   /*never give height to labels, inputs, buttons or headings*/
   .search-input {
     /*rounded borders on input box*/
-    border-radius: 5px;
-    border: 2px solid #a1a1a1;
+    border-radius: 2px;
+    border: 2px solid #2b2727;
     /* padding is for all-around - all side left, rt, up, down */
     padding: 10px 0 10px 5px;
     /*means 10px top, 0 right, 10px bottom, 5px left, goes clockwise*/
     width: 260px;
     margin-bottom: 10px;
   }
-  .search-btn {
-    background-color: #6991e3;
+  .search-button {
+    background-color: #f309f3;
     position: relative;
-    /*to get line under search btn as seen below*/
+    /*to get line under search-button as seen below*/
     width: 260px;
     margin-bottom: 10px;
     color: white;
@@ -67,7 +67,7 @@
     font-weight: 550;
     /*bold = 600 so this is a bit less than full bold*/
   }
-  .search-btn::after {
+  .search-button::after {
     content: "";
     /*fake out as if there were text here so can use underline property below button*/
     border-bottom: 5px solid #c8c8c9;
@@ -84,7 +84,7 @@
     padding: 10px 0 10px 0px;
     /*space around */
   }
-  .prev-searches {   /*for spacing below line*/
+  .prev-search {   /*for spacing below line*/
     padding: 10px 0 10px 0px;   /*space around */
   }
   /*hide elements to start*/
@@ -109,20 +109,20 @@
     font-weight: bold;    /*bold = 600*/
     font-size: 16px;
   }
-  .curr-day-forecast {
-    background-color: #d2ddf7;
+  .curr-forecast {
+    background-color: #dcdde0;
     border: 2px solid #a1a1a1;
     padding: 4px;   /*space between elements and text*/
     margin-top: 10px;   /*put some space between header and curr day forecast box*/
   }
-  .five-day-container {
+  .container-five {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
   }
-  .five-day-forecast {
-    background-color: #447bfa;
+  .forecast-five {
+    background-color: #6b1264;
     color: white;
     width: 19%;
     padding: 5px;   /*space between elements and text*/

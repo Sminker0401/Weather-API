@@ -6,12 +6,12 @@
  let currTemp = document.querySelector("#temp");
  let currWind = document.querySelector("#wind");
  let currHumidity = document.querySelector("#humidity");
- let showRightSide = document.querySelector(".outer-div-right");
- let cityArray = JSON.parse(localStorage.getItem("pastCitySearches")) || []; //or will come back an empty array
+ let showRightSide = document.querySelector(".outer-right");
+ let cityArray = JSON.parse(localStorage.getItem("pastCitySearch")) || []; //or will come back an empty array
  let searchcity = document.getElementById("search-input"); 
 
- let searchBtn = document.getElementById("search-btn"); 
- searchBtn.addEventListener("click", function(){
+ let searchButton = document.getElementById("search-button"); 
+ searchButton.addEventListener("click", function(){
    if (document.getElementById("search-input").value != "") {
      searchfor(searchcity.value);
    } else {
@@ -91,9 +91,9 @@
 } //end of function searchfor
 
 function createCityButtons(){
-    let data = JSON.parse(localStorage.getItem('pastCitySearches'));
+    let data = JSON.parse(localStorage.getItem('pastCitySearch'));
     if(data) {
-    var btnDivEl = document.getElementById('prev-searches');
+    var btnDivEl = document.getElementById('prev-search');
     btnDivEl.textContent = "";
     for (let i = 0; i < data.length; i++) {
       var btn = document.createElement("button");
@@ -110,7 +110,7 @@ function createCityButtons(){
 function saveCityData(city){
     if(!cityArray.includes(city)){
       cityArray.unshift(city);  //this saves in the beginning of the array rather then the end
-      localStorage.setItem("pastCitySearches", JSON.stringify(cityArray.slice(0,8))); 
+      localStorage.setItem("pastCitySearch", JSON.stringify(cityArray.slice(0,8))); 
     }
   }
  function init(){
