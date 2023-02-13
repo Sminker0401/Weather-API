@@ -99,7 +99,7 @@ function createCityButtons(){
       btn.id = "city-btn" + i;
       btn.className = "city-btn";
       btn.innerText = data[i];  //read local storage with city history
-      btn.addEventListener('click', function(e){ handleSearch(e.target.innerText) });
+      btn.addEventListener('click', function(e){ searchfor(e.target.innerText) });
       btnDivEl.appendChild(btn);
     }
    }
